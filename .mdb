@@ -1,0 +1,11 @@
+{
+  "packageManager": "npm",
+  "projectName": "skansen_magdalena",
+  "hash": "298fc617",
+  "backend": {
+    "platform": "php7.4"
+  },
+  "meta": {
+    "type": "backend"
+  }
+}

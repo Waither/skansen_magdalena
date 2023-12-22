@@ -1,0 +1,27 @@
+/* 
+    Main CSS file
+*/
+
+/* Import */
+@import url(font/font.css);
+
+/* Selector */
+body {
+    font-family: Lato-Regular;
+}
+
+/* Id */
+
+/* Class */
+
+.Lato-Regular {
+    font-family: Lato-Regular;
+}
+
+.Lato-Bold {
+    font-family: Lato-Bold;
+}
+
+.Lato-Black {
+    font-family: Lato-Black;
+}
