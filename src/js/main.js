@@ -7,9 +7,9 @@
 let lastUsed;
 
 // Change stylesheet
-function changeMDBstyle(element) {
+function changeMDBstyle(check) {
     var value = 'light';
-    if (element.target.checked) {
+    if (check) {
         value = 'dark';
     }
     setCookie('MDBstyle', value);

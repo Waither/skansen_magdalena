@@ -10,7 +10,7 @@
 
     <!-- Title & icon -->
     <title>Skansen Przemyslu Naftowego Magdalena w Gorlicach</title>
-    <link rel="icon" href="src/images/icon.ico">
+    <link rel="icon" href="src/images/logo/MagdalenaZŚrodkiem.png">
 
     <!-- CSS files -->
     <link type="text/css" rel="stylesheet" href="src/css/fontawesome.min.css">
@@ -60,23 +60,23 @@
 
 			<!-- Toggle button -->
 			<button type="button" class="navbar-toggler" data-mdb-collapse-init data-mdb-target="#navbarLeftAlign" aria-controls="navbarLeftAlign" aria-expanded="false" aria-label="Toggle navigation">
-				<i class="fas fa-bars"></i>
+				<i class="fas fa-bars fa-2x"></i>
 			</button>
 
 			<!-- Collapsible wrapper -->
-			<div class="collapse navbar-collapse" id="navbarLeftAlign">
+			<div id="navbarLeftAlign" class="collapse navbar-collapse fs-5">
 
 				<!-- Left -->
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link active" href="#">Home</a>
-					</li>
+					<a class="navbar-brand mt-2 mt-lg-0" href="/">
+						<img src="/src/images/logo/MagdalenaZŚrodkiem.png" height="50" alt="Logo" loading="lazy">
+					</a>
 
-					<li class="nav-item">
+					<li class="nav-item my-auto">
 						<a class="nav-link" href="#">Link</a>
 					</li>
 
-					<li class="nav-item dropdown">
+					<li class="nav-item my-auto dropdown">
 						<a id="navbarDropdown" class="nav-link dropdown-toggle" data-mdb-dropdown-init aria-expanded="false" role="button">Dropdown</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<li>
@@ -97,23 +97,25 @@
 				</ul>
 
 				<!-- Right -->
-				<div class="d-flex align-items-center">
+				<div class="d-flex align-items-center navbar-nav mb-2 mb-lg-0">
 
 					<!-- Style switch -->
-					<li class="nav-item align-items-center d-flex">
+					<li class="nav-item align-items-center d-flex me-2">
 						<i class="fas fa-sun"></i>
 						<div class="ms-2 form-check form-switch">
-							<input onchange="changeMDBstyle(this)" id="styleSwitch" class="form-check-input" type="checkbox" role="switch" <?php if (isset($_COOKIE['MDBstyle']) && $_COOKIE['MDBstyle'] == 'dark') { echo "checked"; }; ?>>
+							<input onchange="changeMDBstyle(this.checked)" id="styleSwitch" class="form-check-input" type="checkbox" role="switch" <?php if (isset($_COOKIE['MDBstyle']) && $_COOKIE['MDBstyle'] == 'dark') { echo "checked"; }; ?>>
 						</div>
-						<i class="fas fa-moon"></i>
+						<i class="fas fa-moon" style="margin-left: -0.5rem !important;"></i>
 					</li>
 
 					<!-- Avatar -->
-					<div class="dropdown">
-						<a class="d-flex align-items-center hidden-arrow" href="#" role="button">
-							<img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25" alt="Avatar" loading="lazy">
+					<li class="nav-item align-items-center d-flex">
+						<a class="d-flex align-items-center hidden-arrow nav-link" href="#" role="button" aria-expanded="false">
+							<div class="rounded-circle" height="25" alt="Avatar" loading="lazy">
+								<i class="fas fa-user"></i>
+							</div>
 						</a>
-					</div>
+					</li>
 				</div>
 			</div>
 		</div>
