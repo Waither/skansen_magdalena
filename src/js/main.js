@@ -1,35 +1,21 @@
 // Main JS file
 
+// DO NOT CHANGE TO NORMAL MODE
+"use strict"
+
 // Custom variables
 let lastUsed;
 
 // Change stylesheet
-function changeMDBstyle(value) {
-    $.ajax({
-        url: '/src/php/cookies/setCookie.php',
-        type: 'POST',
-        data: {
-            name: 'MDBstyle',
-            value: value
-        },
-        success: function(result) {
-            console.log('Jest ciasteczko!', result);
-            setTimeout(location.reload(), 5000);
-        }
-    })
+function changeMDBstyle(element) {
+    var value = 'light';
+    if (element.target.checked) {
+        value = 'dark';
+    }
+    setCookie('MDBstyle', value);
 }
 
+// Get last used function by user
 $(window).on('unload', e => {
-    $.ajax({
-        url: '/src/php/cookies/setCookie.php',
-        type: 'POST',
-        data: {
-            name: 'lastUsedFunction',
-            value: lastUsed
-        },
-        success: function(result) {
-            console.log('Jest ciasteczko!', result);
-            setTimeout(location.reload(), 5000);
-        }
-    })
+    setCookie('lastUsedFunction', lastUsed);
 });

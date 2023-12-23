@@ -29,71 +29,123 @@
     <script type="text/javascript" src="src/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="src/js/fontawesome.min.js"></script>
     <script type="text/javascript" src="src/js/mdb.umd.min.js" defer></script>
+	<script type="text/javascript" src="src/js/ajaxTemplates.js" defer></script>
+	<script type="text/javascript" src="src/js/alerts.js" defer></script>
     <script type="text/javascript" src="src/js/main.js" defer></script>
-    
+
+	<script>
+		$(document).ready(function() {
+			<?php
+				if (!isset($_COOKIE['cookieAccepted'])) {
+					?>
+					const cookieModal = new mdb.Modal(document.getElementById("cookieModal"));
+					cookieModal.show();
+
+					$("#acceptCookie").on("click", e => {
+						setCookie('cookieAccepted', true);
+					})
+					<?php
+				}
+			?>
+		})
+	</script>
 </head>
 <body>
 
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+
+		<!-- Container wrapper -->
+		<div class="container-fluid">
+
+			<!-- Toggle button -->
+			<button type="button" class="navbar-toggler" data-mdb-collapse-init data-mdb-target="#navbarLeftAlign" aria-controls="navbarLeftAlign" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fas fa-bars"></i>
+			</button>
+
+			<!-- Collapsible wrapper -->
+			<div class="collapse navbar-collapse" id="navbarLeftAlign">
+
+				<!-- Left -->
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Home</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a id="navbarDropdown" class="nav-link dropdown-toggle" data-mdb-dropdown-init aria-expanded="false" role="button">Dropdown</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</li>
+
+							<li>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</li>
+
+							<li><hr class="dropdown-divider"></li>
+
+							<li>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<!-- Right -->
+				<div class="d-flex align-items-center">
+
+					<!-- Style switch -->
+					<li class="nav-item align-items-center d-flex">
+						<i class="fas fa-sun"></i>
+						<div class="ms-2 form-check form-switch">
+							<input onchange="changeMDBstyle(this)" id="styleSwitch" class="form-check-input" type="checkbox" role="switch" <?php if (isset($_COOKIE['MDBstyle']) && $_COOKIE['MDBstyle'] == 'dark') { echo "checked"; }; ?>>
+						</div>
+						<i class="fas fa-moon"></i>
+					</li>
+
+					<!-- Avatar -->
+					<div class="dropdown">
+						<a class="d-flex align-items-center hidden-arrow" href="#" role="button">
+							<img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25" alt="Avatar" loading="lazy">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
 
 
 
 
+    
 
-<nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+    
+	<div style="height: 45.5px;"></div>
+    
+    
+	<div style="height: 1200px;background-color:grey"></div>
+	<?php echo "sieaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasda2ma123";?>
 
-  	<!-- Container wrapper -->
-  	<div class="container-fluid">
-
-    	<!-- Toggle button -->
-    	<button type="button" class="navbar-toggler" data-mdb-collapse-init data-mdb-target="#navbarLeftAlignExample"aria-controls="navbarLeftAlignExample"aria-expanded="false"aria-label="Toggle navigation">
-      		<i class="fas fa-bars"></i>
-    	</button>
-
-		<!-- Collapsible wrapper -->
-		<div class="collapse navbar-collapse" id="navbarLeftAlignExample">
-
-			<!-- Left links -->
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				<li class="nav-item">
-					<a class="nav-link active" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-
-				<!-- Navbar dropdown -->
-				<li class="nav-item dropdown">
-					<a id="navbarDropdown" class="nav-link dropdown-toggle" data-mdb-dropdown-init aria-expanded="false" role="button">Dropdown</a>
-
-					<!-- Dropdown menu -->
-					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li>
-							<button class="btn btn-success bg-" onClick="changeMDBstyle('light')">Normal style</button>
-						</li>
-						<li>
-							<button class="btn btn-danger" onClick="changeMDBstyle('dark')">Dark style</button>
-						</li>
-						<li><hr class="dropdown-divider" /></li>
-						<li>
-						<a class="dropdown-item" href="#">Something else here</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
+	<!-- Cookie Modal -->
+	<div class="modal fade" id="cookieModal" tabindex="-1" aria-labelledby="cookieModalLabel" aria-hidden="true" data-mdb-backdrop="default" data-mdb-keyboard="false">
+		<div class="modal-dialog modal-frame">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="cookieModalLabel">Informacja o plikach cookie</h5>
+					<button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">Strona korzysta z plików cookie. Używamy ich w celu zapisania preferencji użytkownika oraz do łatwiejszego poruszania się po samej stronie. W razie odrzucenia plików cookie, strona nie będzie zapisywać preferencji użytkownika.</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Odrzuć</button>
+					<button id="acceptCookie" type="button" class="btn btn-primary">Zaakceptuj</button>
+				</div>
+			</div>
 		</div>
 	</div>
-</nav>
-
-
-
-
-    
-
-    
-	<div style="height: 200px;"></div>
-    
-    
-	<div style="height: 1200px;"></div>
-	<?php echo "sieaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasda2ma123";?>
 </body>
 </html>
