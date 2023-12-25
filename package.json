@@ -1,25 +1,24 @@
 {
-  "name": "skansen_magdalena",
-  "version": "1.0.0",
-  "description": "Oficjalna strona Skansenu Przemysłu Naftowego \"Magdalena\" w Gorlicach",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "Skansen",
-    "Skansen",
-    "Przemysłu",
-    "Naftowego",
-    "Gorlice",
-    "Magdalena",
-    "Przemysł",
-    "Naftowy"
-  ],
-  "author": "Maciej Gąsior",
-  "license": "ISC",
-  "devDependencies": {
-    "i18next": "^23.7.11",
-    "i18next-fetch-backend": "^5.0.2"
-  }
+    "name": "skansen_magdalena",
+    "version": "1.0.0",
+    "description": "Oficjalna strona Skansenu Przemysłu Naftowego \"Magdalena\" w Gorlicach",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "Skansen",
+        "Przemysłu",
+        "Naftowego",
+        "Gorlice",
+        "Magdalena",
+        "Przemysł",
+        "Naftowy"
+    ],
+    "author": "Maciej Gąsior",
+    "license": "ISC",
+    "devDependencies": {
+        "i18next": "^23.7.11",
+        "i18next-fetch-backend": "^5.0.2"
+    }
 }

@@ -31,7 +31,6 @@
     <script type="text/javascript" src="src/js/mdb.umd.min.js" defer></script>
 	<script type="text/javascript" src="src/js/ajaxTemplates.js" defer></script>
     <script type="text/javascript" src="src/js/main.js" defer></script>
-	<script type="module" src="src/js/translator.js" defer></script>
 
 	<script>
 		$(document).ready(function() {
@@ -87,7 +86,7 @@
 
 					<!-- Index -->
 					<li class="nav-item my-auto mx-2">
-						<a class="nav-link" href="#" data-i18n="index" onclick="loadIndex()"></a>
+						<a class="nav-link" href="#" onclick="loadIndex()">Strona główna</a>
 					</li>
 
 					<!-- History -->
@@ -140,14 +139,14 @@
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
 							<!-- Selected language -->
-							<li><a class="dropdown-item" href="#" data-i18n-switcher data-i18n-lang="pl"><i class="flag-poland flag"></i>Polski<i class="fa fa-check text-success ms-2"></i></a></li>
+							<li><a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski<i class="fa fa-check text-success ms-2"></i></a></li>
 							<li><hr class="dropdown-divider" /></li>
 
 							<!-- Optional language -->
-							<li><a class="dropdown-item" href="#" data-i18n-switcher data-i18n-lang="en"><i class="flag-united-kingdom flag"></i>English</a></li>
-							<li><a class="dropdown-item" href="#" data-i18n-switcher data-i18n-lang="ua"><i class="flag-ukraine flag"></i>українська</a></li>
-							<li><a class="dropdown-item" href="#" data-i18n-switcher data-i18n-lang="ru"><i class="flag-russia flag"></i>Русский</a></li>
-							<li><a class="dropdown-item" href="#" data-i18n-switcher data-i18n-lang="de"><i class="flag-germany flag"></i>Deutsch</a></li>
+							<li><a class="dropdown-item" href="#"><i class="flag-united-kingdom flag"></i>English (in future)</a></li>
+							<li><a class="dropdown-item" href="#"><i class="flag-ukraine flag"></i>українська (в майбутньому)</a></li>
+							<li><a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский (wв будущем)</a></li>
+							<li><a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch (in der Zukunft)</a></li>
 						</ul>
 					</li>
 				</div>
