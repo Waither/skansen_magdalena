@@ -82,27 +82,37 @@
 						<img src="/src/images/logo/MagdalenaZŚrodkiem.png" height="50" alt="Logo" loading="lazy">
 					</a>
 
+					<!-- Index -->
 					<li class="nav-item my-auto">
-						<a class="nav-link" href="#">Link</a>
+						<a class="nav-link" href="#" onclick="loadIndex()">Strona główna</a>
 					</li>
 
+					<!-- History -->
+					<li class="nav-item my-auto">
+						<a class="nav-link" href="#" onclick="">Historia</a>
+					</li>
+
+					<!-- Sightseeing -->
 					<li class="nav-item my-auto dropdown">
-						<a id="navbarDropdown" class="nav-link dropdown-toggle" data-mdb-dropdown-init aria-expanded="false" role="button">Dropdown</a>
+						<a id="navbarDropdown" class="nav-link dropdown-toggle" data-mdb-dropdown-init aria-expanded="false" role="button">Zwiedzanie</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li>
-								<a class="dropdown-item" href="#">Something else here</a>
-							</li>
 
-							<li>
-								<a class="dropdown-item" href="#">Something else here</a>
-							</li>
+							<!-- Sightseeing hours -->
+							<li><a class="dropdown-item" href="#">Godziny otwarcia</a></li>
 
-							<li><hr class="dropdown-divider"></li>
-
-							<li>
-								<a class="dropdown-item" href="#">Something else here</a>
-							</li>
+							
+							<li><a class="dropdown-item" href="#">Bilety</a></li>
 						</ul>
+					</li>
+
+					<!-- Virtual sightseeing -->
+					<li class="nav-item my-auto">
+						<a class="nav-link" href="#" onclick="">Wirtualny spacer</a>
+					</li>
+
+					<!-- Contact -->
+					<li class="nav-item my-auto">
+						<a class="nav-link" href="#" onclick="">Kontakt</a>
 					</li>
 				</ul>
 
@@ -148,9 +158,9 @@
 
 			<!-- Right -->
 			<div>
-				<a href="" class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" role="button" target="_blank" data-mdb-ripple-init data-mdb-popover-init data-mdb-trigger="hover" data-mdb-content="Facebook"><i class="fab fa-facebook-f"></i></a>
-				<a href="" class="btn btn-primary btn-floating m-1" style="background-color: #55acee" role="button" target="_blank" data-mdb-ripple-init data-mdb-popover-init data-mdb-trigger="hover" data-mdb-content="Twitter / X"><i class="fab fa-twitter"></i></a>
-				<a href="" class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" role="button" target="_blank" data-mdb-ripple-init data-mdb-popover-init data-mdb-trigger="hover" data-mdb-content="Instagram"><i class="fab fa-instagram"></i></a>
+				<a class="btn btn-dark btn-floating m-1" style="background-color: #3b5998" href="#!" role="button" target="_blank" data-mdb-ripple-init data-mdb-popover-init data-mdb-trigger="hover" data-mdb-content="Facebook"><i class="fab fa-facebook-f"></i></a>
+				<a class="btn btn-dark btn-floating m-1" style="background-color: #55acee" href="#!" role="button" target="_blank" data-mdb-ripple-init data-mdb-popover-init data-mdb-trigger="hover" data-mdb-content="Twitter / X"><i class="fab fa-twitter"></i></a>
+				<a class="btn btn-dark btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button" target="_blank" data-mdb-ripple-init data-mdb-popover-init data-mdb-trigger="hover" data-mdb-content="Instagram"><i class="fab fa-instagram"></i></a>
 			</div>
 		</section>
 
