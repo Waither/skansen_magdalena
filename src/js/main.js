@@ -20,11 +20,6 @@ function changeMDBstyle(check) {
     setCookie('MDBstyle', value);
 }
 
-// Change language using i18n
-import Translator from './i18n';
-
-new Translator;
-
 // Load index
 function loadIndex() {
     loadNewSite("/src/php/index/index.php");

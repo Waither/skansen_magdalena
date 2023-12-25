@@ -31,6 +31,7 @@
     <script type="text/javascript" src="src/js/mdb.umd.min.js" defer></script>
 	<script type="text/javascript" src="src/js/ajaxTemplates.js" defer></script>
     <script type="text/javascript" src="src/js/main.js" defer></script>
+	<script type="module" src="src/js/translator.js" defer></script>
 
 	<script>
 		$(document).ready(function() {

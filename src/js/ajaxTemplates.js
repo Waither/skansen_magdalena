@@ -18,10 +18,10 @@ function setCookie(name, value) {
 // Load new site
 function loadNewSite(url) {
     $("#main").load(url, function(responseTxt, statusTxt, xhr) {
-        if(statusTxt == "success")
-            console.log("External content loaded successfully!");
-        if(statusTxt == "error")
-            console.log("Error: " + xhr.status + ": " + xhr.statusText);
+        if(statusTxt == "error") {
+            alert("Error: " + xhr.status + ": " + xhr.statusText);
+            return;
+        }
 
         document.querySelectorAll(".carousel").forEach((element) => {
             const instance = new mdb.Carousel(element);
