@@ -78,40 +78,45 @@
 
 				<!-- Left -->
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<a class="navbar-brand mt-2 mt-lg-0" href="/">
+
+					<!-- Logo -->
+					<a class="navbar-brand mt-2 mt-lg-0" href="#" onclick="loadIndex()">
 						<img src="/src/images/logo/MagdalenaZŚrodkiem.png" height="50" alt="Logo" loading="lazy">
 					</a>
 
 					<!-- Index -->
-					<li class="nav-item my-auto">
+					<li class="nav-item my-auto mx-2">
 						<a class="nav-link" href="#" onclick="loadIndex()">Strona główna</a>
 					</li>
 
 					<!-- History -->
-					<li class="nav-item my-auto">
+					<li class="nav-item my-auto mx-2">
 						<a class="nav-link" href="#" onclick="">Historia</a>
 					</li>
 
 					<!-- Sightseeing -->
-					<li class="nav-item my-auto dropdown">
+					<li class="nav-item my-auto mx-2 dropdown">
 						<a id="navbarDropdown" class="nav-link dropdown-toggle" data-mdb-dropdown-init aria-expanded="false" role="button">Zwiedzanie</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
 							<!-- Sightseeing hours -->
 							<li><a class="dropdown-item" href="#">Godziny otwarcia</a></li>
 
-							
+							<!-- Tickets -->
 							<li><a class="dropdown-item" href="#">Bilety</a></li>
+
+							<!-- Access and parking -->
+							<li><a class="dropdown-item" href="#">Dojazd i parking</a></li>
 						</ul>
 					</li>
 
-					<!-- Virtual sightseeing -->
-					<li class="nav-item my-auto">
-						<a class="nav-link" href="#" onclick="">Wirtualny spacer</a>
+					<!-- Gallery -->
+					<li class="nav-item my-auto mx-2">
+						<a class="nav-link" href="#" onclick="">Galeria</a>
 					</li>
 
 					<!-- Contact -->
-					<li class="nav-item my-auto">
+					<li class="nav-item my-auto mx-2">
 						<a class="nav-link" href="#" onclick="">Kontakt</a>
 					</li>
 				</ul>
@@ -120,7 +125,7 @@
 				<div class="d-flex align-items-center navbar-nav mb-2 mb-lg-0">
 
 					<!-- Style switch -->
-					<li class="nav-item align-items-center d-flex me-2">
+					<li class="nav-item mx-2 align-items-center d-flex">
 						<i class="fas fa-sun"></i>
 						<div class="ms-2 form-check form-switch">
 							<input onchange="changeMDBstyle(this.checked)" id="styleSwitch" class="form-check-input" type="checkbox" role="switch" <?php if (isset($_COOKIE['MDBstyle']) && $_COOKIE['MDBstyle'] == 'dark') { echo "checked"; }; ?>>
@@ -128,13 +133,21 @@
 						<i class="fas fa-moon" style="margin-left: -0.5rem !important;"></i>
 					</li>
 
-					<!-- Avatar -->
-					<li class="nav-item align-items-center d-flex">
-						<a class="d-flex align-items-center hidden-arrow nav-link" href="#" role="button" aria-expanded="false">
-							<div class="rounded-circle" height="25" alt="Avatar" loading="lazy">
-								<i class="fas fa-user"></i>
-							</div>
-						</a>
+					<!-- Language -->
+					<li class="nav-item mx-2 dropdown">
+						<a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false"><i class="flag-poland flag m-0"></i></a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+							<!-- Selected language -->
+							<li><a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski<i class="fa fa-check text-success ms-2"></i></a></li>
+							<li><hr class="dropdown-divider" /></li>
+
+							<!-- Optional language -->
+							<li><a class="dropdown-item" href="#"><i class="flag-united-kingdom flag"></i>English</a></li>
+							<li><a class="dropdown-item" href="#"><i class="flag-ukraine flag"></i>українська</a></li>
+							<li><a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a></li>
+							<li><a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a></li>
+						</ul>
 					</li>
 				</div>
 			</div>
