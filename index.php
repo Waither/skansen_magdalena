@@ -86,7 +86,7 @@
 
 					<!-- Index -->
 					<li class="nav-item my-auto mx-2">
-						<a class="nav-link" href="#" onclick="loadIndex()">Strona główna</a>
+						<a class="nav-link" href="#" data-i18n="index" onclick="loadIndex()"></a>
 					</li>
 
 					<!-- History -->
@@ -135,18 +135,18 @@
 
 					<!-- Language -->
 					<li class="nav-item mx-2 dropdown">
-						<a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false"><i class="flag-poland flag m-0"></i></a>
+						<a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false"><i id="selected-lang-flag" class="flag-poland flag m-0"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
 							<!-- Selected language -->
-							<li><a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski<i class="fa fa-check text-success ms-2"></i></a></li>
+							<li><a class="dropdown-item" href="#" data-i18n-switcher data-i18n-lang="pl"><i class="flag-poland flag"></i>Polski<i class="fa fa-check text-success ms-2"></i></a></li>
 							<li><hr class="dropdown-divider" /></li>
 
 							<!-- Optional language -->
-							<li><a class="dropdown-item" href="#"><i class="flag-united-kingdom flag"></i>English</a></li>
-							<li><a class="dropdown-item" href="#"><i class="flag-ukraine flag"></i>українська</a></li>
-							<li><a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a></li>
-							<li><a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a></li>
+							<li><a class="dropdown-item" href="#" data-i18n-switcher data-i18n-lang="en"><i class="flag-united-kingdom flag"></i>English</a></li>
+							<li><a class="dropdown-item" href="#" data-i18n-switcher data-i18n-lang="ua"><i class="flag-ukraine flag"></i>українська</a></li>
+							<li><a class="dropdown-item" href="#" data-i18n-switcher data-i18n-lang="ru"><i class="flag-russia flag"></i>Русский</a></li>
+							<li><a class="dropdown-item" href="#" data-i18n-switcher data-i18n-lang="de"><i class="flag-germany flag"></i>Deutsch</a></li>
 						</ul>
 					</li>
 				</div>
