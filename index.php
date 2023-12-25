@@ -148,9 +148,9 @@
 
 			<!-- Right -->
 			<div>
-				<a href="" class="me-4 text-reset" target="_blank" data-mdb-ripple-init data-mdb-popover-init data-mdb-trigger="hover" data-mdb-content="Facebook"><i class="fab fa-facebook-f"></i></a>
-				<a href="" class="me-4 text-reset" target="_blank" data-mdb-ripple-init data-mdb-popover-init data-mdb-trigger="hover" data-mdb-content="Twitter / X"><i class="fab fa-twitter"></i></a>
-				<a href="" class="me-4 text-reset" target="_blank" data-mdb-ripple-init data-mdb-popover-init data-mdb-trigger="hover" data-mdb-content="Instagram"><i class="fab fa-instagram"></i></a>
+				<a href="" class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" role="button" target="_blank" data-mdb-ripple-init data-mdb-popover-init data-mdb-trigger="hover" data-mdb-content="Facebook"><i class="fab fa-facebook-f"></i></a>
+				<a href="" class="btn btn-primary btn-floating m-1" style="background-color: #55acee" role="button" target="_blank" data-mdb-ripple-init data-mdb-popover-init data-mdb-trigger="hover" data-mdb-content="Twitter / X"><i class="fab fa-twitter"></i></a>
+				<a href="" class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" role="button" target="_blank" data-mdb-ripple-init data-mdb-popover-init data-mdb-trigger="hover" data-mdb-content="Instagram"><i class="fab fa-instagram"></i></a>
 			</div>
 		</section>
 
