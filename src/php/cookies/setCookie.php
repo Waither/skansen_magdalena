@@ -7,7 +7,7 @@
         $value = $_POST['value'];
 
         $options = array(
-            'expires' => 0,
+            'expires' => time()+3600*24*365*10,
             'path' => '/',
             'domain' => '',
             'secure' => true,

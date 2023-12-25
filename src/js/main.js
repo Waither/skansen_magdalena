@@ -19,3 +19,10 @@ function changeMDBstyle(check) {
 $(window).on('unload', e => {
     setCookie('lastUsedFunction', lastUsed);
 });
+
+// Load index
+function loadIndex() {
+    loadNewSite("/src/php/index/index.php");
+    lastUsed = loadIndex1;
+}
+function loadIndex1() {}
