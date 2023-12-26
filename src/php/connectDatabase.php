@@ -10,6 +10,7 @@
             return 0;
         }
         
+        // Query
         $result = $connect->query($query)->fetch_all();
         return $result;
     }
