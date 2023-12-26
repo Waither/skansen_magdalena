@@ -15,6 +15,10 @@ body {
     height: 76.6px;
 }
 
+#main {
+    min-height: 700px;
+}
+
 /* Class */
 .Lato-Regular {
     font-family: Lato-Regular;

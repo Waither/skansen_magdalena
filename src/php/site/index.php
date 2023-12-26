@@ -1,7 +1,9 @@
 <?php
+    // Get all images from directory
     $path = "/src/images/index";
     $files = scandir("/home/php/code/".$path);
 ?>
+
 <!-- Carousel wrapper -->
 <div id="carouselBasic" class="carousel slide carousel-fade" data-mdb-ride="carousel" data-mdb-carousel-init>
     

@@ -3,14 +3,16 @@
 // Set cookie
 function setCookie(name, value) {
     $.ajax({
-        url: '/src/php/cookies/setCookie.php',
+        url: '/src/php/setCookie.php',
         type: 'POST',
         data: {
             name: name,
             value: value
         },
         success: function(result) {
-            setTimeout(location.reload(), 1000);
+            if (name != 'cookieAccepted') {
+                setTimeout(location.reload(), 1000);
+            }
         }
     })
 }
@@ -23,8 +25,16 @@ function loadNewSite(url) {
             return;
         }
 
+        window.scrollTo(0, 0);
+        hideNavbar();
+
         document.querySelectorAll(".carousel").forEach((element) => {
             const instance = new mdb.Carousel(element);
         })
     });
+}
+
+// Hide navbar
+function hideNavbar() {
+    $('.navbar-collapse').collapse('hide');
 }
