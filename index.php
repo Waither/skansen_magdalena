@@ -245,7 +245,7 @@
 					</div>
 					
 					<!-- Map -->
-					<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+					<div class="col-md-12 col-lg-12 col-xl-3 mx-auto mb-md-0 mb-4">
 						<h6 class="text-uppercase fw-bold mb-4"><?php echo $language["map"] ?></h6>
 						<gmp-map class="w-100" style="height: 230px;" center="49.65441131591797,21.135175704956055" zoom="15" map-id="DEMO_MAP_ID">
 							<gmp-advanced-marker position="49.65441131591797,21.135175704956055" title="Skansen Przemysłu Naftowego Magdalena w Gorlicach">

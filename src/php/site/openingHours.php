@@ -1,6 +1,5 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT'].'/src/php/languages/'.$_COOKIE["language"].'.php';
-    require_once $_SERVER['DOCUMENT_ROOT'].'/src/php/connectDatabase.php';
 ?>
 
 <!-- Header -->
@@ -24,7 +23,14 @@
                                 if (isset($_COOKIE['MDBstyle']) && $_COOKIE['MDBstyle'] == 'dark') {
                                     $color = " text-light";
                                 }
-                                foreach(query("SELECT ID, time FROM openingHours WHERE ID LIKE '$i%';") as $hour) {
+
+                                $hours = [
+                                    [1.1, "9.00 – 14.00, 16.00 – 19.00"],
+                                    [1.2, "9.00 – 14.00"],
+                                    [1.3, "po uzgodnieniu telefonicznym"]
+                                ];
+
+                                foreach($hours as $hour) {
                                     echo '<li class="list-group-item'.$color.'"><i class="fas fa-calendar-days fa-sm me-2 opacity-70"></i>'.$language['openingHours'.$hour[0]].': '.$hour[1].'</li>';
                                 }
                                 if ($i == 2) {
